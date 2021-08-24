@@ -100,7 +100,13 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
+	"cron": {
+                "0/5 * * * *": [
+			"erpnext.stock.reorder_item.reorder_item"
+                ]
+        },
+}
 # 	"all": [
 # 		"fbc.tasks.all"
 # 	],
